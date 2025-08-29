@@ -1,6 +1,7 @@
-import './PWABadge.css';
+import "./PWABadge.css";
 
-import { useRegisterSW } from 'virtual:pwa-register/react';
+// eslint-disable-next-line import/no-unresolved
+import { useRegisterSW } from "virtual:pwa-register/react";
 
 function PWABadge() {
   // check for updates every hour
@@ -13,15 +14,13 @@ function PWABadge() {
   } = useRegisterSW({
     onRegisteredSW(swUrl, r) {
       if (period <= 0) return;
-      if (r?.active?.state === 'activated') {
+      if (r?.active?.state === "activated") {
         registerPeriodicSync(period, swUrl, r);
-      }
-      else if (r?.installing) {
-        r.installing.addEventListener('statechange', (e) => {
+      } else if (r?.installing) {
+        r.installing.addEventListener("statechange", (e) => {
           /** @type {ServiceWorker} */
           const sw = e.target;
-          if (sw.state === 'activated')
-            registerPeriodicSync(period, swUrl, r);
+          if (sw.state === "activated") registerPeriodicSync(period, swUrl, r);
         });
       }
     },
@@ -34,17 +33,29 @@ function PWABadge() {
 
   return (
     <div className="PWABadge" role="alert" aria-labelledby="toast-message">
-      { (offlineReady || needRefresh)
-      && (
+      {(offlineReady || needRefresh) && (
         <div className="PWABadge-toast">
           <div className="PWABadge-message">
-            { offlineReady
-              ? <span id="toast-message">App ready to work offline</span>
-              : <span id="toast-message">New content available, click on reload button to update.</span>}
+            {offlineReady ? (
+              <span id="toast-message">App ready to work offline</span>
+            ) : (
+              <span id="toast-message">
+                New content available, click on reload button to update.
+              </span>
+            )}
           </div>
           <div className="PWABadge-buttons">
-            { needRefresh && <button className="PWABadge-toast-button" onClick={() => updateServiceWorker(true)}>Reload</button> }
-            <button className="PWABadge-toast-button" onClick={() => close()}>Close</button>
+            {needRefresh && (
+              <button
+                className="PWABadge-toast-button"
+                onClick={() => updateServiceWorker(true)}
+              >
+                Reload
+              </button>
+            )}
+            <button className="PWABadge-toast-button" onClick={() => close()}>
+              Close
+            </button>
           </div>
         </div>
       )}
@@ -64,18 +75,16 @@ function registerPeriodicSync(period, swUrl, r) {
   if (period <= 0) return;
 
   setInterval(async () => {
-    if ('onLine' in navigator && !navigator.onLine)
-      return;
+    if ("onLine" in navigator && !navigator.onLine) return;
 
     const resp = await fetch(swUrl, {
-      cache: 'no-store',
+      cache: "no-store",
       headers: {
-        'cache': 'no-store',
-        'cache-control': 'no-cache',
+        cache: "no-store",
+        "cache-control": "no-cache",
       },
     });
 
-    if (resp?.status === 200)
-      await r.update();
+    if (resp?.status === 200) await r.update();
   }, period);
 }
