@@ -3,9 +3,11 @@ import reactLogo from "../../assets/react.svg";
 import appLogo from "../../../public/favicon.svg";
 import PWABadge from "../../PWABadge";
 import "./index.css";
+import { useAuth } from "../../hooks/useAuth";
 
 function Dashboard() {
   const [count, setCount] = useState(0);
+  const { login } = useAuth();
 
   return (
     <>
@@ -25,6 +27,10 @@ function Dashboard() {
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
+      </div>
+      <div className="card">
+        <button onClick={() => login("patata")}>Loguearse</button>
+        <p>pataaaataaaaaaaa</p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
