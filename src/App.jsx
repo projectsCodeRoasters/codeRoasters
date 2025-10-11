@@ -4,8 +4,6 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./contexts/AuthContext";
 import Logged from "./pages/Loged";
 
-// commit prueba
-
 function App() {
   return (
     <Router>
