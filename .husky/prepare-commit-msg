@@ -12,8 +12,9 @@ if [ "$commit_source" = "merge" ]; then
   if [ -f "$merge_msg_file" ]; then
     merge_msg=$(cat "$merge_msg_file")
     
-    # Check if the merge message contains release_Candidate
-    if echo "$merge_msg" | grep -q "release_Candidate"; then
+    # Only block if we're merging FROM release_Candidate INTO another branch
+    # (Allow merging INTO release_Candidate)
+    if [ "$current_branch" != "release_Candidate" ] && echo "$merge_msg" | grep -q "release_Candidate"; then
       echo "🚫 ERROR: Merging from release_Candidate branch is not allowed!"
       echo "Current branch: $current_branch"
       echo ""
@@ -23,4 +24,5 @@ if [ "$commit_source" = "merge" ]; then
     fi
   fi
 fi
+
 
