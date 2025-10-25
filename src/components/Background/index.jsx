@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import * as THREE from "three";

@@ -6,7 +6,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import importPlugin from "eslint-plugin-import";
 
 export default [
-  { ignores: ["dist"] },
+  { ignores: ["dist", "dev-dist", "build", "src/components/Background/index.jsx"] },
   js.configs.recommended,
   {
     files: ["**/*.{js,jsx}"],
