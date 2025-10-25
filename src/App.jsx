@@ -1,13 +1,17 @@
-import { Box } from "@chakra-ui/react";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import PWABadge from "./PWABadge";
-import Footer from "./components/Footer";
-import LiquidEther from "./components/Background";
+// import { Box } from "@chakra-ui/react";
+// import Header from "./components/Header";
+// import Main from "./components/Main";
+// import PWABadge from "./PWABadge";
+// import Footer from "./components/Footer";
+// import LiquidEther from "./components/Background";
+import ColorDemo from "./components/ColorDemo";
 
 function App() {
   return (
     <>
+      <ColorDemo />
+      {/*
+      <Box minHeight={"100vh"} p={4} position="relative" bg="bg.foam">
       <Box minHeight={"100vh"} p={4} position="relative" bg="bg.foam">
         <Box
           position="absolute"
@@ -42,6 +46,7 @@ function App() {
         </Box>
       </Box>
       <PWABadge />
+      */}
     </>
   );
 }
