@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+# Check if MERGE_HEAD exists (indicates we're in a merge)
+if [ -f .git/MERGE_HEAD ]; then
+  # Get the branch being merged from
+  merge_branch=$(git reflog -1 | grep -oP "merge \K[^:]+")
+  
+  if echo "$merge_branch" | grep -q "release_Candidate"; then
+    echo "🚫 ERROR: Cannot merge from release_Candidate branch!"
+    echo ""
+    echo "release_Candidate is a protected branch and cannot be merged into other branches."
+    echo "If you need changes from release_Candidate:"
+    echo "  - Cherry-pick specific commits: git cherry-pick <commit-hash>"
+    echo "  - Or create a new feature branch"
+    echo ""
+    echo "To abort this merge, run:"
+    echo "  git merge --abort"
+    exit 1
+  fi
+fi
+

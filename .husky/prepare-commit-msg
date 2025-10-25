@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+# Get the current branch name
+current_branch="$(git rev-parse --abbrev-ref HEAD)"
+
+# Get the commit message type (merge, squash, etc.)
+commit_source="$2"
+
+# Only check for merge commits
+if [ "$commit_source" = "merge" ]; then
+  merge_msg_file="$1"
+  if [ -f "$merge_msg_file" ]; then
+    merge_msg=$(cat "$merge_msg_file")
+    
+    # Only block if we're merging FROM release_Candidate INTO another branch
+    # (Allow merging INTO release_Candidate)
+    if [ "$current_branch" != "release_Candidate" ] && echo "$merge_msg" | grep -q "release_Candidate"; then
+      echo "🚫 ERROR: Merging from release_Candidate branch is not allowed!"
+      echo "Current branch: $current_branch"
+      echo ""
+      echo "release_Candidate is a protected branch and cannot be merged into other branches."
+      echo "Please cherry-pick specific commits if needed, or create a feature branch."
+      exit 1
+    fi
+  fi
+fi
+

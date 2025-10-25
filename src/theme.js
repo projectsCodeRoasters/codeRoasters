@@ -59,6 +59,7 @@ const customConfig = {
           secondary: { value: "#fff9f1" },
           dark: { value: "#5e2f2f" },
           darker: { value: "#381c1c" },
+          foam: { value: "#D4A574" }, // Espuma de café
         },
         // Colores de texto
         text: {
