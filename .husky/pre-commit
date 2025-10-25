@@ -3,6 +3,12 @@
 # Get the current branch name
 branch="$(git rev-parse --abbrev-ref HEAD)"
 
+# Check if we're in the middle of a merge
+if [ -f .git/MERGE_HEAD ]; then
+  # Allow merge commits on protected branches
+  exit 0
+fi
+
 # Check if we're on master or release_Candidate branch
 if [ "$branch" = "master" ] || [ "$branch" = "release_Candidate" ]; then
   echo "🚫 ERROR: Direct commits to $branch branch are not allowed!"
@@ -14,4 +20,5 @@ if [ "$branch" = "master" ] || [ "$branch" = "release_Candidate" ]; then
 fi
 
 npm run lint
+
 
