@@ -1,8 +1,10 @@
+import { Box } from "@chakra-ui/react";
+
 function Header() {
   return (
-    <header>
+    <Box>
       <h1>Code Roasters</h1>
-    </header>
+    </Box>
   );
 }
 

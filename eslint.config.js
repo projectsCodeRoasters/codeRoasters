@@ -47,7 +47,18 @@ export default [
       "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
       semi: ["error", "always"],
       "max-statements-per-line": ["error", { max: 1 }],
-      indent: ["error", 2, { ignoredNodes: ["JSXElement *", "JSXFragment *"] }],
+      indent: [
+        "error",
+        2,
+        {
+          ignoredNodes: [
+            "JSXElement",
+            "JSXElement *",
+            "JSXFragment",
+            "JSXFragment *",
+          ],
+        },
+      ],
       "react/jsx-indent": ["error", 2],
       "react/jsx-indent-props": ["error", 2],
       "react/jsx-closing-bracket-location": ["error", "line-aligned"],
@@ -70,6 +81,7 @@ export default [
       "import/named": "error", // Marca imports con nombres incorrectos
       "import/default": "error", // Marca default imports incorrectos
       "import/no-duplicates": "error", // No permitir imports duplicados
+      "no-duplicate-imports": "error", // Regla nativa para evitar imports duplicados
     },
   },
 ];
