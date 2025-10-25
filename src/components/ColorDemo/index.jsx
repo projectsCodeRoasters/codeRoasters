@@ -180,38 +180,284 @@ const ColorDemo = () => {
         </Heading>
         <Stack gap={6}>
           {/* Botones */}
-          <Box>
-            <Text fontWeight="bold" mb={3} color="fg.default">
-              Botones:
+          <Box
+            bg="bg.surface"
+            p={6}
+            borderRadius="lg"
+            border="1px solid"
+            borderColor="border.default"
+          >
+            <Text fontWeight="bold" mb={4} color="fg.default" fontSize="xl">
+              Botones
             </Text>
-            <Stack direction="row" gap={3} flexWrap="wrap">
-              <Button colorPalette="primary">Primary Button</Button>
-              <Button colorPalette="secondary">Secondary Button</Button>
-              <Button colorPalette="tertiary">Tertiary Button</Button>
-              <Button variant="outline" colorPalette="primary">
-                Outline Primary
-              </Button>
-              <Button variant="ghost" colorPalette="secondary">
-                Ghost Secondary
-              </Button>
+            <Stack gap={5}>
+              {/* Solid Buttons */}
+              <Box>
+                <Text
+                  fontSize="sm"
+                  mb={3}
+                  color="fg.muted"
+                  fontWeight="semibold"
+                >
+                  Variante Solid:
+                </Text>
+                <Stack direction="row" gap={3} flexWrap="wrap">
+                  <Button variant="solid" colorPalette="primary" size="lg">
+                    Primary
+                  </Button>
+                  <Button variant="solid" colorPalette="secondary" size="lg">
+                    Secondary
+                  </Button>
+                  <Button variant="solid" colorPalette="tertiary" size="lg">
+                    Tertiary
+                  </Button>
+                </Stack>
+              </Box>
+
+              {/* Subtle Buttons */}
+              <Box>
+                <Text
+                  fontSize="sm"
+                  mb={3}
+                  color="fg.muted"
+                  fontWeight="semibold"
+                >
+                  Variante Subtle:
+                </Text>
+                <Stack direction="row" gap={3} flexWrap="wrap">
+                  <Button variant="subtle" colorPalette="primary" size="lg">
+                    Primary
+                  </Button>
+                  <Button variant="subtle" colorPalette="secondary" size="lg">
+                    Secondary
+                  </Button>
+                  <Button variant="subtle" colorPalette="tertiary" size="lg">
+                    Tertiary
+                  </Button>
+                </Stack>
+              </Box>
+
+              {/* Surface Buttons */}
+              <Box>
+                <Text
+                  fontSize="sm"
+                  mb={3}
+                  color="fg.muted"
+                  fontWeight="semibold"
+                >
+                  Variante Surface:
+                </Text>
+                <Stack direction="row" gap={3} flexWrap="wrap">
+                  <Button variant="surface" colorPalette="primary" size="lg">
+                    Primary
+                  </Button>
+                  <Button variant="surface" colorPalette="secondary" size="lg">
+                    Secondary
+                  </Button>
+                  <Button variant="surface" colorPalette="tertiary" size="lg">
+                    Tertiary
+                  </Button>
+                </Stack>
+              </Box>
+
+              {/* Outline Buttons */}
+              <Box>
+                <Text
+                  fontSize="sm"
+                  mb={3}
+                  color="fg.muted"
+                  fontWeight="semibold"
+                >
+                  Variante Outline:
+                </Text>
+                <Stack direction="row" gap={3} flexWrap="wrap">
+                  <Button variant="outline" colorPalette="primary" size="lg">
+                    Primary
+                  </Button>
+                  <Button variant="outline" colorPalette="secondary" size="lg">
+                    Secondary
+                  </Button>
+                  <Button variant="outline" colorPalette="tertiary" size="lg">
+                    Tertiary
+                  </Button>
+                </Stack>
+              </Box>
+
+              {/* Ghost Buttons */}
+              <Box>
+                <Text
+                  fontSize="sm"
+                  mb={3}
+                  color="fg.muted"
+                  fontWeight="semibold"
+                >
+                  Variante Ghost:
+                </Text>
+                <Stack direction="row" gap={3} flexWrap="wrap">
+                  <Button variant="ghost" colorPalette="primary" size="lg">
+                    Primary
+                  </Button>
+                  <Button variant="ghost" colorPalette="secondary" size="lg">
+                    Secondary
+                  </Button>
+                  <Button variant="ghost" colorPalette="tertiary" size="lg">
+                    Tertiary
+                  </Button>
+                </Stack>
+              </Box>
+
+              {/* Plain Buttons */}
+              <Box>
+                <Text
+                  fontSize="sm"
+                  mb={3}
+                  color="fg.muted"
+                  fontWeight="semibold"
+                >
+                  Variante Plain:
+                </Text>
+                <Stack direction="row" gap={3} flexWrap="wrap">
+                  <Button variant="plain" colorPalette="primary" size="lg">
+                    Primary
+                  </Button>
+                  <Button variant="plain" colorPalette="secondary" size="lg">
+                    Secondary
+                  </Button>
+                  <Button variant="plain" colorPalette="tertiary" size="lg">
+                    Tertiary
+                  </Button>
+                </Stack>
+              </Box>
+
+              {/* Tamaños */}
+              <Box>
+                <Text
+                  fontSize="sm"
+                  mb={3}
+                  color="fg.muted"
+                  fontWeight="semibold"
+                >
+                  Diferentes Tamaños (Primary Solid):
+                </Text>
+                <Stack
+                  direction="row"
+                  gap={3}
+                  flexWrap="wrap"
+                  alignItems="center"
+                >
+                  <Button variant="solid" colorPalette="primary" size="xs">
+                    XS
+                  </Button>
+                  <Button variant="solid" colorPalette="primary" size="sm">
+                    SM
+                  </Button>
+                  <Button variant="solid" colorPalette="primary" size="md">
+                    MD
+                  </Button>
+                  <Button variant="solid" colorPalette="primary" size="lg">
+                    LG
+                  </Button>
+                  <Button variant="solid" colorPalette="primary" size="xl">
+                    XL
+                  </Button>
+                </Stack>
+              </Box>
             </Stack>
           </Box>
 
           {/* Badges */}
-          <Box>
-            <Text fontWeight="bold" mb={3} color="fg.default">
-              Badges:
+          <Box
+            bg="bg.surface"
+            p={6}
+            borderRadius="lg"
+            border="1px solid"
+            borderColor="border.default"
+          >
+            <Text fontWeight="bold" mb={4} color="fg.default" fontSize="xl">
+              Badges
             </Text>
-            <Stack direction="row" gap={3} flexWrap="wrap">
-              <Badge colorPalette="primary">Primary</Badge>
-              <Badge colorPalette="secondary">Secondary</Badge>
-              <Badge colorPalette="tertiary">Tertiary</Badge>
-              <Badge variant="outline" colorPalette="primary">
-                Outline
-              </Badge>
-              <Badge variant="subtle" colorPalette="secondary">
-                Subtle
-              </Badge>
+            <Stack gap={4}>
+              <Box>
+                <Text
+                  fontSize="sm"
+                  mb={3}
+                  color="fg.muted"
+                  fontWeight="semibold"
+                >
+                  Variante Solid:
+                </Text>
+                <Stack
+                  direction="row"
+                  gap={3}
+                  flexWrap="wrap"
+                  alignItems="center"
+                >
+                  <Badge colorPalette="primary" size="lg">
+                    Primary Badge
+                  </Badge>
+                  <Badge colorPalette="secondary" size="lg">
+                    Secondary Badge
+                  </Badge>
+                  <Badge colorPalette="tertiary" size="lg">
+                    Tertiary Badge
+                  </Badge>
+                  <Badge bg="accent.500" color="tertiary.700" size="lg">
+                    Accent Badge
+                  </Badge>
+                </Stack>
+              </Box>
+              <Box>
+                <Text
+                  fontSize="sm"
+                  mb={3}
+                  color="fg.muted"
+                  fontWeight="semibold"
+                >
+                  Variante Outline:
+                </Text>
+                <Stack
+                  direction="row"
+                  gap={3}
+                  flexWrap="wrap"
+                  alignItems="center"
+                >
+                  <Badge variant="outline" colorPalette="primary" size="lg">
+                    Outline Primary
+                  </Badge>
+                  <Badge variant="outline" colorPalette="secondary" size="lg">
+                    Outline Secondary
+                  </Badge>
+                  <Badge variant="outline" colorPalette="tertiary" size="lg">
+                    Outline Tertiary
+                  </Badge>
+                </Stack>
+              </Box>
+              <Box>
+                <Text
+                  fontSize="sm"
+                  mb={3}
+                  color="fg.muted"
+                  fontWeight="semibold"
+                >
+                  Variante Subtle:
+                </Text>
+                <Stack
+                  direction="row"
+                  gap={3}
+                  flexWrap="wrap"
+                  alignItems="center"
+                >
+                  <Badge variant="subtle" colorPalette="primary" size="lg">
+                    Subtle Primary
+                  </Badge>
+                  <Badge variant="subtle" colorPalette="secondary" size="lg">
+                    Subtle Secondary
+                  </Badge>
+                  <Badge variant="subtle" colorPalette="tertiary" size="lg">
+                    Subtle Tertiary
+                  </Badge>
+                </Stack>
+              </Box>
             </Stack>
           </Box>
 

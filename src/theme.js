@@ -1,7 +1,85 @@
-import { createSystem, defaultConfig } from "@chakra-ui/react";
+import { createSystem, defaultConfig, defineRecipe } from "@chakra-ui/react";
 
 const customConfig = {
   theme: {
+    recipes: {
+      button: defineRecipe({
+        base: {
+          fontWeight: "semibold",
+          borderRadius: "md",
+        },
+        variants: {
+          variant: {
+            solid: {
+              bg: "colorPalette.500",
+              color: "white",
+              _hover: {
+                bg: "colorPalette.600",
+              },
+            },
+            subtle: {
+              bg: "colorPalette.50",
+              color: "colorPalette.700",
+              _hover: {
+                bg: "colorPalette.100",
+              },
+            },
+            surface: {
+              bg: "colorPalette.100",
+              color: "colorPalette.800",
+              _hover: {
+                bg: "colorPalette.200",
+              },
+            },
+            outline: {
+              borderWidth: "2px",
+              borderColor: "colorPalette.500",
+              color: "colorPalette.500",
+              _hover: {
+                bg: "colorPalette.50",
+              },
+            },
+            ghost: {
+              color: "colorPalette.500",
+              _hover: {
+                bg: "colorPalette.50",
+              },
+            },
+            plain: {
+              color: "colorPalette.500",
+              _hover: {
+                textDecoration: "underline",
+              },
+            },
+          },
+        },
+      }),
+      badge: defineRecipe({
+        base: {
+          fontWeight: "medium",
+          borderRadius: "sm",
+          px: 2,
+          py: 0.5,
+        },
+        variants: {
+          variant: {
+            solid: {
+              bg: "colorPalette.500",
+              color: "white",
+            },
+            subtle: {
+              bg: "colorPalette.100",
+              color: "colorPalette.800",
+            },
+            outline: {
+              borderWidth: "1px",
+              borderColor: "colorPalette.500",
+              color: "colorPalette.500",
+            },
+          },
+        },
+      }),
+    },
     tokens: {
       colors: {
         // Colores principales
