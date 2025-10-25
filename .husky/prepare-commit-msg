@@ -25,3 +25,4 @@ if [ "$commit_source" = "merge" ]; then
   fi
 fi
 
+

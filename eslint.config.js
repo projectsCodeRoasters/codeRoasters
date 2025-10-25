@@ -42,6 +42,7 @@ export default [
         "warn",
         { allowConstantExport: true },
       ],
+      "no-console": ["warn", { allow: ["warn", "error"] }],
       "no-multi-spaces": "error",
       "no-trailing-spaces": "error",
       "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
