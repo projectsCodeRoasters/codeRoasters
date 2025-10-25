@@ -202,13 +202,40 @@ const ColorDemo = () => {
                   Variante Solid:
                 </Text>
                 <Stack direction="row" gap={3} flexWrap="wrap">
-                  <Button variant="solid" colorPalette="primary" size="lg">
+                  <Button
+                    variant="solid"
+                    bg="primary.500"
+                    color="white"
+                    borderRadius="md"
+                    _hover={{ bg: "primary.600" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Primary
                   </Button>
-                  <Button variant="solid" colorPalette="secondary" size="lg">
+                  <Button
+                    variant="solid"
+                    bg="secondary.500"
+                    color="white"
+                    borderRadius="md"
+                    _hover={{ bg: "secondary.600" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Secondary
                   </Button>
-                  <Button variant="solid" colorPalette="tertiary" size="lg">
+                  <Button
+                    variant="solid"
+                    bg="tertiary.500"
+                    color="white"
+                    borderRadius="md"
+                    _hover={{ bg: "tertiary.600" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Tertiary
                   </Button>
                 </Stack>
@@ -225,13 +252,40 @@ const ColorDemo = () => {
                   Variante Subtle:
                 </Text>
                 <Stack direction="row" gap={3} flexWrap="wrap">
-                  <Button variant="subtle" colorPalette="primary" size="lg">
+                  <Button
+                    variant="subtle"
+                    bg="primary.50"
+                    color="primary.700"
+                    borderRadius="md"
+                    _hover={{ bg: "primary.100" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Primary
                   </Button>
-                  <Button variant="subtle" colorPalette="secondary" size="lg">
+                  <Button
+                    variant="subtle"
+                    bg="secondary.50"
+                    color="secondary.700"
+                    borderRadius="md"
+                    _hover={{ bg: "secondary.100" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Secondary
                   </Button>
-                  <Button variant="subtle" colorPalette="tertiary" size="lg">
+                  <Button
+                    variant="subtle"
+                    bg="tertiary.50"
+                    color="tertiary.700"
+                    borderRadius="md"
+                    _hover={{ bg: "tertiary.100" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Tertiary
                   </Button>
                 </Stack>
@@ -248,13 +302,40 @@ const ColorDemo = () => {
                   Variante Surface:
                 </Text>
                 <Stack direction="row" gap={3} flexWrap="wrap">
-                  <Button variant="surface" colorPalette="primary" size="lg">
+                  <Button
+                    variant="surface"
+                    bg="primary.100"
+                    color="primary.800"
+                    borderRadius="md"
+                    _hover={{ bg: "primary.200" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Primary
                   </Button>
-                  <Button variant="surface" colorPalette="secondary" size="lg">
+                  <Button
+                    variant="surface"
+                    bg="secondary.100"
+                    color="secondary.800"
+                    borderRadius="md"
+                    _hover={{ bg: "secondary.200" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Secondary
                   </Button>
-                  <Button variant="surface" colorPalette="tertiary" size="lg">
+                  <Button
+                    variant="surface"
+                    bg="tertiary.100"
+                    color="tertiary.800"
+                    borderRadius="md"
+                    _hover={{ bg: "tertiary.200" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Tertiary
                   </Button>
                 </Stack>
@@ -271,13 +352,46 @@ const ColorDemo = () => {
                   Variante Outline:
                 </Text>
                 <Stack direction="row" gap={3} flexWrap="wrap">
-                  <Button variant="outline" colorPalette="primary" size="lg">
+                  <Button
+                    bg="transparent"
+                    borderWidth="2px"
+                    borderStyle="solid"
+                    borderColor="primary.500"
+                    color="primary.500"
+                    borderRadius="md"
+                    _hover={{ bg: "primary.50" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Primary
                   </Button>
-                  <Button variant="outline" colorPalette="secondary" size="lg">
+                  <Button
+                    bg="transparent"
+                    borderWidth="2px"
+                    borderStyle="solid"
+                    borderColor="secondary.500"
+                    color="secondary.500"
+                    borderRadius="md"
+                    _hover={{ bg: "secondary.50" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Secondary
                   </Button>
-                  <Button variant="outline" colorPalette="tertiary" size="lg">
+                  <Button
+                    bg="transparent"
+                    borderWidth="2px"
+                    borderStyle="solid"
+                    borderColor="tertiary.500"
+                    color="tertiary.500"
+                    borderRadius="md"
+                    _hover={{ bg: "tertiary.50" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Tertiary
                   </Button>
                 </Stack>
@@ -294,13 +408,37 @@ const ColorDemo = () => {
                   Variante Ghost:
                 </Text>
                 <Stack direction="row" gap={3} flexWrap="wrap">
-                  <Button variant="ghost" colorPalette="primary" size="lg">
+                  <Button
+                    variant="ghost"
+                    color="primary.500"
+                    borderRadius="md"
+                    _hover={{ bg: "primary.50" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Primary
                   </Button>
-                  <Button variant="ghost" colorPalette="secondary" size="lg">
+                  <Button
+                    variant="ghost"
+                    color="secondary.500"
+                    borderRadius="md"
+                    _hover={{ bg: "secondary.50" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Secondary
                   </Button>
-                  <Button variant="ghost" colorPalette="tertiary" size="lg">
+                  <Button
+                    variant="ghost"
+                    color="tertiary.500"
+                    borderRadius="md"
+                    _hover={{ bg: "tertiary.50" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Tertiary
                   </Button>
                 </Stack>
@@ -317,13 +455,34 @@ const ColorDemo = () => {
                   Variante Plain:
                 </Text>
                 <Stack direction="row" gap={3} flexWrap="wrap">
-                  <Button variant="plain" colorPalette="primary" size="lg">
+                  <Button
+                    variant="plain"
+                    color="primary.500"
+                    borderRadius="md"
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Primary
                   </Button>
-                  <Button variant="plain" colorPalette="secondary" size="lg">
+                  <Button
+                    variant="plain"
+                    color="secondary.500"
+                    borderRadius="md"
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Secondary
                   </Button>
-                  <Button variant="plain" colorPalette="tertiary" size="lg">
+                  <Button
+                    variant="plain"
+                    color="tertiary.500"
+                    borderRadius="md"
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     Tertiary
                   </Button>
                 </Stack>
@@ -345,19 +504,64 @@ const ColorDemo = () => {
                   flexWrap="wrap"
                   alignItems="center"
                 >
-                  <Button variant="solid" colorPalette="primary" size="xs">
+                  <Button
+                    variant="solid"
+                    bg="primary.500"
+                    color="white"
+                    borderRadius="md"
+                    _hover={{ bg: "primary.600" }}
+                    size="xs"
+                    px={3}
+                    py={1}
+                  >
                     XS
                   </Button>
-                  <Button variant="solid" colorPalette="primary" size="sm">
+                  <Button
+                    variant="solid"
+                    bg="primary.500"
+                    color="white"
+                    borderRadius="md"
+                    _hover={{ bg: "primary.600" }}
+                    size="sm"
+                    px={4}
+                    py={2}
+                  >
                     SM
                   </Button>
-                  <Button variant="solid" colorPalette="primary" size="md">
+                  <Button
+                    variant="solid"
+                    bg="primary.500"
+                    color="white"
+                    borderRadius="md"
+                    _hover={{ bg: "primary.600" }}
+                    size="md"
+                    px={5}
+                    py={2.5}
+                  >
                     MD
                   </Button>
-                  <Button variant="solid" colorPalette="primary" size="lg">
+                  <Button
+                    variant="solid"
+                    bg="primary.500"
+                    color="white"
+                    borderRadius="md"
+                    _hover={{ bg: "primary.600" }}
+                    size="lg"
+                    px={6}
+                    py={3}
+                  >
                     LG
                   </Button>
-                  <Button variant="solid" colorPalette="primary" size="xl">
+                  <Button
+                    variant="solid"
+                    bg="primary.500"
+                    color="white"
+                    borderRadius="md"
+                    _hover={{ bg: "primary.600" }}
+                    size="xl"
+                    px={7}
+                    py={4}
+                  >
                     XL
                   </Button>
                 </Stack>
