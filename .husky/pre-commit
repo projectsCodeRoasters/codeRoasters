@@ -19,6 +19,20 @@ if [ "$branch" = "master" ] || [ "$branch" = "release_Candidate" ]; then
   exit 1
 fi
 
+# Check for console.log in staged files
+if git diff --cached --name-only | grep -E '\.(js|jsx|ts|tsx)$' > /dev/null; then
+  if git diff --cached | grep -E '^\+[^+].*console\.log\(' > /dev/null; then
+    echo "🚫 ERROR: console.log() statements are not allowed in commits!"
+    echo ""
+    echo "Found console.log in your staged changes."
+    echo "Please remove all console.log statements before committing."
+    echo ""
+    echo "You can use console.warn() or console.error() instead if needed."
+    exit 1
+  fi
+fi
+
 npm run lint
+
 
 
