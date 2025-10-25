@@ -1,0 +1,7 @@
+# Ignore generated files
+dist/
+build/
+dev-dist/
+
+# Temporarily ignore Background component with indentation issues
+src/components/Background/index.jsx
